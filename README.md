@@ -2,6 +2,7 @@ from collections import deque
 def bfs_shortest_path(graph, start, goal):
     if start == goal:
         return [start]
+    queue = deque([start])
     parent = {start: None}
     while queue:
         current_node = queue.popleft()
